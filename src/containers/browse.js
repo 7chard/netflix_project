@@ -49,7 +49,7 @@ export function BrowseContainer({ slides }) {
         <>
             {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
 
-            <Header src="joker1" dontShowOnSmallViewPort>
+            <Header src="joker1" >
                 <Header.Frame>
                     <Header.Group>
                         <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
@@ -96,7 +96,7 @@ export function BrowseContainer({ slides }) {
                     <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
                         <Card.Title>{slideItem.title}</Card.Title>
                         <Card.Entities>
-                            {slideItem.data.map((item) => (
+                            {slideItem.data.slice(0, 5).map((item) => (
                                 <Card.Item key={item.docId} item={item}>
                                     <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
                                     <Card.Meta>

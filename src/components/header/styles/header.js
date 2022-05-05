@@ -18,7 +18,7 @@ export const Container = styled.div`
   height: 100px;
   justify-content: space-between;
   align-items: center;
-
+  
   a {
     display: flex;
   }
@@ -188,8 +188,8 @@ export const Feature = styled(Container)`
   align-items: normal;
   width: 50%;
 
-  @media (max-width: 1100px) {
-    display: none;
+  @media (max-width: 1000px) {
+    display: auto;
   }
 `;
 
